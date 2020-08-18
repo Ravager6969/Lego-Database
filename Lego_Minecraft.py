@@ -27,7 +27,7 @@ night = False
 day = False
 
 red = (255,0,0)
-font = pygame.font.Font("KINGFONT.ttf",40)
+font = pygame.font.Font("C:\Users\jason\source\repos\Lego Minecraft Database\2\Lego Minecraft Database\KINGFONT.ttf",40)
 cyan = (0,255,255)
 random_color = (random.randrange(100,255)),(random.randrange(100,255)), (random.randrange(100,255))
 sky_blue = (39,145, 251)
