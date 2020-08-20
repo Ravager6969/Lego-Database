@@ -112,11 +112,11 @@ def test():
 
         dirname = filedialog.askdirectory(parent=root,initialdir="/",title='Please select a directory')
 
-        file_path = dirname + '/Lego Minecraft Database'
+        file_path = dirname + '\\Lego Minecraft Database'
 
-        path = file_path + '/Pictures'
+        path = file_path + '\\Pictures'
 
-        path_2 = file_path + '/Sounds' 
+        path_2 = file_path + '\\Sounds' 
         
         os.makedirs(path)
 
