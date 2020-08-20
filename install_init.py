@@ -73,7 +73,7 @@ def github(url, name):
 
 
 def create_files(message):
-    print('king')
+        
     for x in github_pages.keys():
         if x == 'world_day1.jpg':
             os.chdir(file_path + '\\Pictures')
@@ -103,8 +103,6 @@ def test():
         print('Downloading...')
 
         message = 'Lego Minecraft Database Successfully Installed'
-        
-        print('golem1')
 
         create_files(message)
         
