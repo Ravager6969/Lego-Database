@@ -5,7 +5,7 @@
 #from Lego_Minecraft import *
 
 
-import os, shutil, time, pygame, sys
+import requests, os, shutil, time, pygame, sys
 import urllib.request
 from pygame.locals import *
 pygame.init()
@@ -103,9 +103,11 @@ def test():
         print('Downloading...')
 
         message = 'Lego Minecraft Database Successfully Installed'
+        
+        print('golem1')
 
         create_files(message)
-
+        
     except FileExistsError:
         try:
             os.chdir(file_path)
