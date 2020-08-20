@@ -5,8 +5,8 @@
 #from Lego_Minecraft import *
 
 
-import requests, os, shutil, time, pygame, sys
-import urllib.request
+import requests, os, shutil, time, pygame, sys, tkinter, urllib.request
+from tkinter import filedialog
 from pygame.locals import *
 pygame.init()
 def clicked(pos1, pos2, pos3, pos4): #pos1 left, pos2 right, pos3 top, pos4 bottom
@@ -57,12 +57,23 @@ os.chmod('install.py', 0o777)
 
 original_file_path = os.getcwd()
 
-file_path = os.getcwd() + '\\Lego Minecraft Database'
+#file_path = os.getcwd() + '\\Lego Minecraft Database'
 
-path = "Lego Minecraft Database/Pictures"
+#path = "Lego Minecraft Database/Pictures"
 
-path_2 = "Lego Minecraft Database/Sounds"
+#path_2 = "Lego Minecraft Database/Sounds"
 
+root = tkinter.Tk()
+
+root.withdraw()
+
+dirname = filedialog.askdirectory(parent=root,initialdir="/",title='Please select a directory')
+
+file_path = dirname
+
+path = file_path + '/Pictures'
+
+path_2 = file_path + '/Sounds'
 
 #update
 #shutil.rmtree(file_path)
