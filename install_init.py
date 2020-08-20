@@ -176,6 +176,7 @@ github_pages = {
         'Lego_Minecraft.py':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Lego_Minecraft.py',
         'textbox.py':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/textbox.py',
         'characters.py':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/characters.py',
+        'init.py':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/init.py',
         'Updates.txt':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Updates.txt',
         'version.txt':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/version.txt',
         'world_day1.jpg':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Pictures/world_day1.jpg',
