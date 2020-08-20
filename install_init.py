@@ -5,7 +5,7 @@
 #from Lego_Minecraft import *
 
 
-import requests, os, shutil, time, pygame, sys
+import os, shutil, time, pygame, sys
 import urllib.request
 from pygame.locals import *
 pygame.init()
