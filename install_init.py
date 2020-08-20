@@ -161,9 +161,11 @@ def test():
 
 
 pygame.font.init()
-
-font = pygame.font.Font("KINGFONT.ttf", 30)
-font2 = pygame.font.Font("KINGFONT.ttf", 20)
+try:
+        font = pygame.font.Font("KINGFONT.ttf", 30)
+        font2 = pygame.font.Font("KINGFONT.ttf", 20)
+except FileNotFoundError:
+        print('Please Provide a Font File and Rename it "'"KINGFONT.ttf"'"')
 size = width, height = 900, 900
 
 screen = pygame.display.set_mode(size)
