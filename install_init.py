@@ -172,4 +172,18 @@ kingkinggolembullbushkingwolf = True
 
 info = "100% legit no scam or virus"
 
-github_pages = {'Lego_Minecraft.py':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Lego_Minecraft.py', 'textbox.py':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/textbox.py', 'characters.py':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/characters.py', 'Updates.txt':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Updates.txt', 'version.txt':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/version.txt', 'world_day1.jpg':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Pictures/world_day1.jpg', '5893ae1aad54eb2e300e756492593c01.png':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Pictures/5893ae1aad54eb2e300e756492593c01.png', 'Sun1.png':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Pictures/Sun1.png', 'haggstorm.mp3':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Sounds/haggstorm.mp3', 'sweden.mp3':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Sounds/sweden.mp3', 'wet_hands.mp3':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Sounds/wet_hands.mp3', 'mice_on_venus.mp3':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Sounds/mice_on_venus.mp3', 'minecraft.mp3':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Sounds/minecraft.mp3'}
+github_pages = {
+        'Lego_Minecraft.py':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Lego_Minecraft.py',
+        'textbox.py':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/textbox.py',
+        'characters.py':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/characters.py',
+        'Updates.txt':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Updates.txt',
+        'version.txt':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/version.txt',
+        'world_day1.jpg':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Pictures/world_day1.jpg',
+        '5893ae1aad54eb2e300e756492593c01.png':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Pictures/5893ae1aad54eb2e300e756492593c01.png',
+        'Sun1.png':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Pictures/Sun1.png',
+        'haggstorm.mp3':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Sounds/haggstorm.mp3',
+        'sweden.mp3':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Sounds/sweden.mp3',
+        'wet_hands.mp3':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Sounds/wet_hands.mp3',
+        'mice_on_venus.mp3':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Sounds/mice_on_venus.mp3',
+        'minecraft.mp3':'https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/Sounds/minecraft.mp3'
+}
