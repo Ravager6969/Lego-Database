@@ -130,7 +130,7 @@ def test():
             os.chdir(original_file_path)
 
             if version_read == latest_version:
-                message = 'Lego Minecraft Database is Up to Date'
+                message = 'Lego Minecraft Database is Already Installed and is Up to Date'
                 print(message)
             
             else:
