@@ -63,17 +63,17 @@ original_file_path = os.getcwd()
 
 #path_2 = "Lego Minecraft Database/Sounds"
 
-root = tkinter.Tk()
+#root = tkinter.Tk()
 
-root.withdraw()
+#root.withdraw()
 
-dirname = filedialog.askdirectory(parent=root,initialdir="/",title='Please select a directory')
+#dirname = filedialog.askdirectory(parent=root,initialdir="/",title='Please select a directory')
 
-file_path = dirname
+#file_path = dirname
 
-path = file_path + '/Pictures'
+#path = file_path + '/Pictures'
 
-path_2 = file_path + '/Sounds'
+#path_2 = file_path + '/Sounds'
 
 #update
 #shutil.rmtree(file_path)
@@ -105,6 +105,18 @@ def test():
     
 
     try:
+        root = tkinter.Tk()
+
+        root.withdraw()
+
+        dirname = filedialog.askdirectory(parent=root,initialdir="/",title='Please select a directory')
+
+        file_path = dirname
+
+        path = file_path + '/Pictures'
+
+        path_2 = file_path + '/Sounds' 
+        
         os.makedirs(path)
 
         os.makedirs(path_2)
