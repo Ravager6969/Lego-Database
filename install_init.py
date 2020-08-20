@@ -83,7 +83,7 @@ def github(url, name):
     open(name, 'wb').write(r.content)
 
 
-def create_files(message):
+def create_files(message, file_path):
         
     for x in github_pages.keys():
         if x == 'world_day1.jpg':
@@ -127,7 +127,7 @@ def test():
 
         message = 'Lego Minecraft Database Successfully Installed'
 
-        create_files(message)
+        create_files(message, file_path)
         
     except FileExistsError:
         try:
@@ -159,7 +159,7 @@ def test():
                 os.makedirs(path)
                 os.makedirs(path_2)
                 os.chdir(file_path)
-                create_files(message)
+                create_files(message, file_path)
                 
 
         except FileNotFoundError:
