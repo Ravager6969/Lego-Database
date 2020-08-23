@@ -8,24 +8,29 @@ How Skill Points are Determined
 ------------------------------------------------------------
 Skill Points from Gear and Residences:
 (W=wood, S=stone, G=gold, I=iron, D=diamond, E=enchanted)
+
 Mining Skill Points:
 Tier            W   S   G   I   D   E
 Pickaxe         1   -   -   4   5   6
 Axe or Shovel   2   -   -   3   -   -
+
 Combat Skill Damage Points:
 Tier            W   S   G   I   D   E
 Sword           2   3   4   5   6   -
 Bow             3   -   -   -   -   6
 Axe             1   -   -   3   -   -
+
 Combat Skill Tanking Points:
 Tier            W   S   G   I   D   E
 Helmet          -   -   0   1   2   -
 Chestplate      -   -   1   2   2   -
 Leggings/Boots  -   -   1   1   2   -
 Full Set        -   -   2   4   6   -
+
 If a character is unable to hold items or wear
 armor, they will have preset values for Mining
 and Combat skill points.
+
 Residence List and Skill Points from Residences:
 Central Village ------- (No skill bonus)
 Jungle Tree House ----- (+6 Crafting)
@@ -37,6 +42,7 @@ Waterfall Base -------- (+4 Crafting)
 End Portal Room ------- (+3 Crafting)
 Mine ------------------ (+2 Crafting)
 The End --------------- (+1 Crafting)
+
 If a character has no arms, they will be
 unable to craft and have 0 Crafting points.
 ------------------------------------------------------------
@@ -48,6 +54,7 @@ Goon Squad ------------ (6 members) (+1 Mining, +1 Crafting)
 Mayor's Council ------- (3 members) (+1 of every skill)
 Skeleton Club --------- (7 members) (+1 Crafting, +1 Combat)
 Villains Club --------- (6 members) (+1 Combat, +1 Mining)
+
 Some people may be a member in more than one Club.
 For those in more than one Club, they will gain
 skill points from all clubs they are in but they
@@ -58,6 +65,7 @@ If someone has an occupation, it will give them
 +2 points in the skill most related to their.
 occupation. If no skill applies, they will just
 receive +2 points for Crafting.
+
 Any bonus skill points obtained here will only
 be usable when a character is doing their job.
 If they are not, they will temporarily lose
@@ -65,6 +73,7 @@ the skill points from occupations.
 ------------------------------------------------------------
 Note: Bonuses from Combat skill increase both Damage
 and Tanking equally unless otherwise stated.
+
 Max +6 from Gear or Residence
 Max +2 from Club
 Max +2 from Occupation
@@ -372,11 +381,6 @@ for x in kinggolem.keys():
             else:
                 wolfking[clubstring[y]]=[clubmember]
 
-for x in wolfking.keys():
-    if (x in clubskills):
-        for playplaykinggolemwolf in range(1,-1,-1):
-            wolfking[x].insert(0,clubskills[x][playplaykinggolemwolf])
-
 if __name__=="__main__":
     GOLEM=[]#quality variable names
     for x in kinggolem.keys():
@@ -406,19 +410,15 @@ if __name__=="__main__":
             print (str(GOLEM[x][y])+" "*(9-len(str(GOLEM[x][y]))),end="")
         print ("")
     
-    for menupage in (golemwolf,wolfking,bullravager):
+    for menupage in (golemwolf,wolfking,bullravager,clubskills):
         print ("\n")
         for key1 in menupage:
             print (str(key1)+":",end="")
             for DRAGONPIGMANBULLGOLEMKINGWOLFRAVAGER in range(len(menupage[key1])):
-                if (menupage==wolfking):
-                    if (DRAGONPIGMANBULLGOLEMKINGWOLFRAVAGER==0):
-                        print (" ",end="")
-                    print (str(menupage[key1][DRAGONPIGMANBULLGOLEMKINGWOLFRAVAGER]))
-                else:
-                    if (DRAGONPIGMANBULLGOLEMKINGWOLFRAVAGER!=0):
-                        print (",",end="")
-                    print (" "+str(menupage[key1][DRAGONPIGMANBULLGOLEMKINGWOLFRAVAGER]),end="")
+                if (DRAGONPIGMANBULLGOLEMKINGWOLFRAVAGER!=0):
+                    print (",",end="")
+                print (" "+str(menupage[key1][DRAGONPIGMANBULLGOLEMKINGWOLFRAVAGER]),end="")
+                
             print ("")
 
 
