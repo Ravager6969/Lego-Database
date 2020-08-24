@@ -18,7 +18,7 @@ class buttontextbox(object):
         self.maxscroll=max(0,buttonsize[1]*(len(self.buttons))-self.rect.height)
         self.maincolor=maincolor
         self.buttoncolor=buttoncolor
-        self.buttontextcolor=buttontextcolor
+        self.buttontextcolor=[buttontextcolor for x in range(len(self.buttons))]
         self.bordercolor=bordercolor
         self.scrollbarclickeddowncolor=scrollbarclickeddowncolor
         self.scrollbarborder=scrollbarborder
@@ -37,7 +37,7 @@ class buttontextbox(object):
         for x in range(len(self.buttons)):
             self.buttons[x].display(self.scroll,self.borderrect)
             if (self.buttons[x].rect.centery-int(self.font.size(self.buttonlabels[x])[1]/2)-self.scroll>self.borderrect.top and self.buttons[x].rect.centery+int(self.font.size(self.buttonlabels[x])[1]/2)-self.scroll<self.borderrect.bottom and self.font.size(self.buttonlabels[x])[0]<=self.buttons[x].rect.width):#hahahaha big if statement from a very efficient programmer
-                self.displaytextoutline(self.surface,self.buttonlabels[x],(self.buttons[x].rect.centerx,self.buttons[x].rect.centery-self.scroll),self.font,color=self.buttontextcolor)
+                self.displaytextoutline(self.surface,self.buttonlabels[x],(self.buttons[x].rect.centerx,self.buttons[x].rect.centery-self.scroll),self.font,color=self.buttontextcolor[x])
     
     def clickbuttons(self,mouse):
         for x in range(len(self.buttons)):
@@ -95,6 +95,10 @@ class buttontextbox(object):
         
         self.scrollbarrecttop1=self.rect.height*self.scroll/(self.maxscroll+self.rect.height)
         self.scrollbarrect=pygame.Rect(self.rect.right-self.scrollbarborder,self.rect.top+math.floor(self.scrollbarrecttop1),self.scrollbarborder,math.ceil(self.rect.height**2/(self.maxscroll+self.rect.height)))
+    
+    def changebuttoncolor(self,index,color=(0,207,255)):
+        if (index>=0 and index<len(self.buttontextcolor)):
+            self.buttontextcolor[index]=color
         
     def displaytext(self,surface,text,position,font,color=(0,0,0),align=(0,0)):
         display=font.render(text,True,color)
@@ -158,6 +162,8 @@ if (__name__=="__main__"):
     THEKING=buttontextbox(screen,pygame.Rect(100,100,350,700),buttonlist1,[330,100],KINGFONT,scrollvalue=40)
     THEKING2=buttontextbox(screen,pygame.Rect(600,200,600,200),buttonlist2,[600,50],KINGFONT1,scrollvalue=4,border=5,maincolor=53247,buttoncolor=8508989,buttontextcolor=(255,3,204),bordercolor=16777215)
 
+    KINGCOLOR_01=(156,80,243)
+
     startmouseposition=0
     
     #do not change information below\
@@ -170,7 +176,14 @@ if (__name__=="__main__"):
                 done=True#User perssed close
             if event.type==pygame.MOUSEBUTTONDOWN:
                 if (event.button==1):
-                    #print (THEKING.clickbuttons(pygame.mouse.get_pos()))
+                    #----------_-____--
+                    index1=THEKING.clickbuttons(pygame.mouse.get_pos())
+                    if (index1>=0):
+                        if (THEKING.buttontextcolor[index1]!=(0,207,255)):
+                            THEKING.changebuttoncolor(index1)
+                        else:
+                            THEKING.changebuttoncolor(index1,(142,155,229))
+                    #----------_-____--
                     THEKING.clickscroll(pygame.mouse.get_pos(),pygame.MOUSEBUTTONDOWN)
                     THEKING2.clickscroll(pygame.mouse.get_pos(),pygame.MOUSEBUTTONDOWN)
                     startmouseposition=pygame.mouse.get_pos()[1]
