@@ -199,7 +199,7 @@ if (__name__=="__main__"):
         THEKING2.displaybuttons()
         #print (THEKING.scrollbarrect)
         
-        print (clock.get_time(),clock.get_rawtime())
+        #print (clock.get_time(),clock.get_rawtime())
         #-----------------------------------
         pygame.display.flip()
         clock.tick(60)
