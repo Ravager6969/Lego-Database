@@ -1,5 +1,5 @@
 #life sucks installer thing idk rly know at this point
-
+#convet to exe
 import requests, os
 r = requests.get('https://raw.githubusercontent.com/Ravager6969/Lego-Database/master/install_init.py', allow_redirects=True)
 open('install_init.py', 'wb').write(r.content)
