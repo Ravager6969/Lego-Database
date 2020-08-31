@@ -1,4 +1,4 @@
-import pygame,random
+import pygame,random,sys
 
 class golem(object):#100% original code written together by me and myself copyright 2020 my github page visit me at ravager6969 donate to me to help support the creation of massive projects like this
     def __init__(self,text,color,position,font):
@@ -100,7 +100,8 @@ if (__name__=="__main__"):
     font1 = pygame.font.Font("KINGFONT.ttf",48)
     font2 = pygame.font.Font("KINGFONT.ttf",36)
     string = "\\n week 1 \\n Spring Trap Olive Branch Open Business Warped Arena \\n Minecart Madness Cobweb Sandy Gems Shoulder Bash \\n Deep Diner Junk Park Parallel Plays Well Cut \\n Double Swoosh Canal Grande Tornado Ring Triple Dribble \\n Bouncing Diner Fenced In Split Pinball Dreams \\n Crystal Arcade Snake Prairie Crossroads Center Field \\n Chill Space Some Assembly Required Tiny Town Pinhole Punt \\n \\n week 2 \\n Cell Division Deeper Danger Bandit Cove Beach Ball \\n Stone Fort Crated Factory Massive Attack Field Goal \\n Hard Rock Mine Heat Wave Hot Potato Super Stadium \\n Undermine Nuts & Bolts Control Grande Post Haste \\n Deathcap Trap Land Ahoy Traffic Jam Backyard Bowl \\n Spare Space Factory Rush Perimeter Penalty Kick \\n Escape Velocity Layer Cake Pit Stop Galaxy Arena \\n Play Play King Bolem Wolf"
-    string=convert("events.txt")
+    if (len(sys.argv)>1):
+        string=convert(sys.argv[1])
     #string="bolem ging sfsdjfklwejlkrjweirjwelkrjweklrkabcdefghijklmnopqrstuvwxyz gj"
     string2 = "a a a a aa  a a a a aa k k k k k k k k k kl l l l l l l l l 4 4 4 4 4 4 5 5 5 5 55 5 6 6 6 6 6 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 ^ 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9 6 9"
 
