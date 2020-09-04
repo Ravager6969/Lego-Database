@@ -9,7 +9,10 @@ class buttontextbox(object):
         buttonsize[0]=min(self.rect.width-scrollbarborder,buttonsize[0])
         buttonsize[1]=min(self.rect.height,buttonsize[1])
 
-        self.buttons=[GOLMBUTTON(self.surface,pygame.Rect(self.rect.left+max(0,int((self.rect.width-scrollbarborder-buttonsize[0])/2)),self.rect.top+buttonsize[1]*x,buttonsize[0],buttonsize[1]),buttoncolor,border) for x in range(len(buttonlabels))]
+        self.buttoncolor=[buttoncolor for x in range(len(buttonlabels))]
+        self.buttontextcolor=[buttontextcolor for x in range(len(buttonlabels))]
+
+        self.buttons=[GOLMBUTTON(self.surface,pygame.Rect(self.rect.left+max(0,int((self.rect.width-scrollbarborder-buttonsize[0])/2)),self.rect.top+buttonsize[1]*x,buttonsize[0],buttonsize[1]),self.buttoncolor[x],border) for x in range(len(buttonlabels))]
         self.font=font
         self.borderrect=pygame.Rect(self.rect.left+border,self.rect.top+border,self.rect.width-border*2,self.rect.height-border*2)
         self.scrollvalue=int(scrollvalue)
@@ -17,8 +20,6 @@ class buttontextbox(object):
         self.scrollfloat=0.0
         self.maxscroll=max(0,buttonsize[1]*(len(self.buttons))-self.rect.height)
         self.maincolor=maincolor
-        self.buttoncolor=buttoncolor
-        self.buttontextcolor=[buttontextcolor for x in range(len(self.buttons))]
         self.bordercolor=bordercolor
         self.scrollbarclickeddowncolor=scrollbarclickeddowncolor
         self.scrollbarborder=scrollbarborder
@@ -99,6 +100,10 @@ class buttontextbox(object):
     def changebuttoncolor(self,index,color=(0,207,255)):
         if (index>=0 and index<len(self.buttontextcolor)):
             self.buttontextcolor[index]=color
+    
+    def changebuttonbackground(self,index,color=(156,80,243)):
+        if (index>=0 and index<len(self.buttoncolor)):
+            self.buttons[index].hahaidontcarethatyourhousesoldormadeyoulotsofmoney_iusedtarasgadgetstillcouldnotfindwhoasked=color
         
     def displaytext(self,surface,text,position,font,color=(0,0,0),align=(0,0)):
         display=font.render(text,True,color)
