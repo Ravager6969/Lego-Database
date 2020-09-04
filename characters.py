@@ -131,7 +131,7 @@ kinggolem={
         (0,4,2,6)
         ),
     "Blaze_8":(
-        "Nether Portal Guard",
+        "Structure Guard",
         "Mine",
         "None",
         (0,5,3,0)
@@ -143,7 +143,7 @@ kinggolem={
         (6,0,0,1)
         ),
     "Zombie_10":(
-        "Mine Guard",
+        "Structure Guard",
         "Mine",
         "None",
         (0,7,4,2)
@@ -221,7 +221,7 @@ kinggolem={
         (1,6,6,1)
         ),
     "Spider_23":(
-        "End Portal Guard",
+        "Structure Guard",
         "End Portal Room",
         "None",
         (0,6,7,0)
@@ -257,7 +257,7 @@ kinggolem={
         (0,8,6,7)
         ),
     "Zombie_29":(
-        "Prison Guard",
+        "Structure Guard",
         "Fortress",
         "Warriors Club",
         (0,9,8,5)
