@@ -28,36 +28,7 @@ class ravager(object):
         self.textcolor=textcolor
         self.scrollvalue=scrollvalue#how many pixels to scroll by each input
         self.scrolly=0#shifts all the text up by this amount of pixels
-        self.GOLEMS=[]
-        THEKINGx=0#yes it is the blit spot in the box
-        THEKINGy=0
-        line=""
-        self.string=self.string.split(" ")#you could have just made string a list
-        for x in range(len(self.string)):
-            self.string[x]=" "+self.string[x]
-            kingsize=self.font.size(self.string[x])
-            if (self.string[x][1:]=="\\n" and x<len(self.string)-1):
-                self.GOLEMS.append(golem(line,self.textcolor,(self.textboxrect.left,THEKINGy+self.textboxrect.top),self.font))
-                THEKINGx=0
-                THEKINGy+=kingsize[1]
-                line=""
-                continue
-            if (THEKINGx+kingsize[0]>self.textboxrect.width):
-                if (" " not in line):
-                    while (self.font.size(line)[0]>self.textboxrect.width):
-                        line=line[:-1]
-                self.GOLEMS.append(golem(line,self.textcolor,(self.textboxrect.left,THEKINGy+self.textboxrect.top),self.font))
-                line=self.string[x][1:]
-                THEKINGx=kingsize[0]
-                THEKINGy+=kingsize[1]
-            else:
-                if (THEKINGx==0):
-                    line+=self.string[x][1:]#remove space at beginning of new line
-                else:
-                    line+=self.string[x]
-                THEKINGx+=kingsize[0]
-            if (x==len(self.string)-1):#add last line even if it does not take up the whole width
-                self.GOLEMS.append(golem(line,self.textcolor,(self.textboxrect.left,THEKINGy+self.textboxrect.top),self.font))
+        self.changetext(self.string)
     def scroll(self,direction,mouse):
         if (mouse[0]>self.textboxrect.left and mouse[0]<self.textboxrect.right and mouse[1]>self.textboxrect.top and mouse[1]<self.textboxrect.bottom):
             if (direction=="down"):
@@ -78,6 +49,38 @@ class ravager(object):
                     self.GOLEMS[x].KING(self.surface,(self.GOLEMS[x].position[0],self.GOLEMS[x].position[1]-(self.scrolly)))
             else:#one line
                 self.GOLEMS[x].KING(self.surface,(self.GOLEMS[x].position[0],self.GOLEMS[x].position[1]))
+    def changetext(self,newstring):
+        self.GOLEMS=[]
+        THEKINGx=0#yes it is the blit spot in the box
+        THEKINGy=0
+        line=""
+        newstring=newstring.split(" ")#you could have just made string a list
+        for x in range(len(newstring)):
+            newstring[x]=" "+newstring[x]
+            kingsize=self.font.size(newstring[x])
+            if (newstring[x][1:]=="\\n" and x<len(newstring)-1):
+                self.GOLEMS.append(golem(line,self.textcolor,(self.textboxrect.left,THEKINGy+self.textboxrect.top),self.font))
+                THEKINGx=0
+                THEKINGy+=kingsize[1]
+                line=""
+                continue
+            if (THEKINGx+kingsize[0]>self.textboxrect.width):
+                if (" " not in line):
+                    while (self.font.size(line)[0]>self.textboxrect.width):
+                        line=line[:-1]
+                self.GOLEMS.append(golem(line,self.textcolor,(self.textboxrect.left,THEKINGy+self.textboxrect.top),self.font))
+                line=newstring[x][1:]
+                THEKINGx=kingsize[0]
+                THEKINGy+=kingsize[1]
+            else:
+                if (THEKINGx==0):
+                    line+=newstring[x][1:]#remove space at beginning of new line
+                else:
+                    line+=newstring[x]
+                THEKINGx+=kingsize[0]
+            if (x==len(newstring)-1):#add last line even if it does not take up the whole width
+                self.GOLEMS.append(golem(line,self.textcolor,(self.textboxrect.left,THEKINGy+self.textboxrect.top),self.font))
+        self.scrolly=0
 
 def convert(file):
     f=open(file)
